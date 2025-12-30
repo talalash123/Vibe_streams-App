@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette: Modern & Immersive (Spotify-esque) -->
+
+    <!-- Backgrounds -->
+    <color name="bg_main">#121212</color>
+    <color name="card_bg">#282828</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+
+    <!-- Accent -->
+    <color name="accent_green">#1DB954</color>
+    <color name="accent_green_dark">#189947</color> <!-- Darker variant for status bar -->
+
+    <!-- Misc -->
+    <color name="white">#FFFFFF</color>
+    <color name="red_accent">#EF4444</color>
+
+    <!-- DEPRECATED - Use accent_green instead -->
+    <color name="blue_primary">#1DB954</color>
+    <color name="green_accent">#1DB954</color>
+</resources>

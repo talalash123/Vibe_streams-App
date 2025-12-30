@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required for streaming music, fetching data, and calling the AI API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/my_new_logo"
+        android:roundIcon="@mipmap/my_new_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vibe_Streams">
+
+        <!-- Launcher Activity: Splash Screen -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login & Register Activities -->
+        <activity
+            android:name=".activity_login"
+            android:exported="false" />
+        <activity
+            android:name=".activity_register"
+            android:exported="false" />
+
+        <!-- Main User Activities -->
+        <activity
+            android:name=".activity_user_home"
+            android:exported="false" />
+        <activity
+            android:name=".activity_song_player"
+            android:exported="false" />
+        <activity
+            android:name=".activity_create_playlist"
+            android:exported="false" />
+        <activity
+            android:name=".activity_search"
+            android:exported="false" />
+        <activity
+            android:name=".activity_library"
+            android:exported="false" />
+        <activity
+            android:name=".activity_playlist_detail"
+            android:exported="false" />
+        <activity
+            android:name=".AddSongActivity"
+            android:exported="false" />
+
+        <!-- Admin Activities -->
+        <activity
+            android:name=".AdminPanelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddEditSongActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

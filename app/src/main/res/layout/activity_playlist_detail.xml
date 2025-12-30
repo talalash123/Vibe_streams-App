@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="80dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:id="@+id/ivPlaylistCover"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:src="@drawable/music_placeholder"
+            android:scaleType="centerCrop"
+            android:background="@color/card_bg"/>
+
+        <TextView
+            android:id="@+id/tvPlaylistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="My Awesome Playlist"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPlaylistCreator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="By Vibe Streams • 0 songs"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/action_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_section"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddSongs"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Song"
+            android:textColor="@android:color/black"
+            app:backgroundTint="@android:color/white"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconTint="@android:color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToggleDeleteMode"
+            style="@style/Widget.MaterialComponents.Button" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Delete Song"
+            android:textColor="@android:color/black"
+            app:backgroundTint="@android:color/white"
+            app:icon="@android:drawable/ic_menu_delete"
+            app:iconTint="@android:color/black" />
+
+    </LinearLayout>
+
+    <!-- Playlist Songs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlaylistSongs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_buttons_layout"
+        android:layout_above="@id/miniPlayerContainer"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:padding="8dp" />
+
+    <!-- Floating Buttons -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:src="@drawable/back"
+        app:tint="@color/text_primary"
+        android:contentDescription="Back"/>
+
+    <ImageView
+        android:id="@+id/btnMore"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="12dp"
+        android:src="@drawable/more"
+        app:tint="@color/text_primary"
+        android:contentDescription="More Options"/>
+
+    <!-- Mini Player Container -->
+    <FrameLayout
+        android:id="@+id/miniPlayerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
